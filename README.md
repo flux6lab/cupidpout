@@ -1,33 +1,33 @@
-# CupidPout GitHub Pages site
+# CupidPout public website
 
-This folder is a dependency-free static site for the public CupidPout page, Privacy Policy, Terms of Use, and AdMob publisher verification.
+This repository contains the public static website for CupidPout, including:
 
-## Publish with GitHub Pages
+- the product landing page;
+- Privacy Policy and Terms of Use pages in English and Traditional Chinese;
+- `app-ads.txt` for advertising verification.
 
-1. Push this repository to GitHub.
-2. In **Settings → Pages**, choose **Deploy from a branch**.
-3. Select the branch you want to publish (usually `main`) and choose the `/docs` folder.
-4. Save. GitHub will show the public Pages URL after deployment.
+The site is dependency-free and does not collect or process information through the website itself.
 
-For a GitHub **project** Pages site, the public URLs will be:
+## Pages
 
-- `https://<github-username>.github.io/<repository>/`
-- `https://<github-username>.github.io/<repository>/privacy.html`
-- `https://<github-username>.github.io/<repository>/terms.html`
-- `https://<github-username>.github.io/<repository>/zh-tw/`
-- `https://<github-username>.github.io/<repository>/zh-tw/privacy.html`
-- `https://<github-username>.github.io/<repository>/zh-tw/terms.html`
-- `https://<github-username>.github.io/<repository>/app-ads.txt`
+- English homepage: `index.html`
+- Traditional Chinese homepage: `zh-tw/index.html`
+- Privacy Policy: `privacy.html` and `zh-tw/privacy.html`
+- Terms of Use: `terms.html` and `zh-tw/terms.html`
+- Advertising verification: `app-ads.txt`
 
-This deployment is suitable for the public ASO, Privacy Policy, and Terms links.
+## GitHub Pages
 
-## Required setup for AdMob verification
+GitHub Pages should publish the `main` branch from the repository root. The public site URL is:
 
-AdMob ignores the path portion of the marketing website URL and crawls only the hostname’s root: `https://<hostname>/app-ads.txt`. Therefore, a project Pages URL such as `https://<github-username>.github.io/<repository>/` **cannot** be used by itself for AdMob verification; its `app-ads.txt` is one path too deep.
+`https://flux6lab.github.io/cupidpout/`
 
-Choose one of these deployment options for the same files in this folder:
+The site contains only static HTML, CSS, and image assets. There are no build steps, server-side components, forms, or client-side scripts.
 
-1. **Recommended, no custom domain:** publish the contents of `docs/` to a GitHub user/organization Pages repository named `<github-username>.github.io`. The file then resolves at `https://<github-username>.github.io/app-ads.txt`.
-2. **Custom domain:** connect a custom domain to this GitHub Pages project. Ensure that `https://<your-domain>/app-ads.txt` serves this exact file.
+## AdMob verification
 
-Put that root site URL in the App Store listing’s **Marketing URL**. After the app is publicly listed, allow AdMob at least 24 hours to crawl and verify the file.
+For AdMob verification, `app-ads.txt` must be available at the root of the public hostname. A project Pages URL such as:
+
+`https://flux6lab.github.io/cupidpout/`
+
+does not make the file available at `https://flux6lab.github.io/app-ads.txt`. Use a user or organization Pages site, or connect a custom domain, and serve the file at `https://your-domain.example/app-ads.txt`. Keep that root URL as the app’s marketing website and leave the file publicly accessible for verification.

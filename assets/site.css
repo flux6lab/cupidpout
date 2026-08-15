@@ -27,8 +27,8 @@ body {
   padding: 1.6rem 0;
 }
 
-.brand { color: var(--ink); font-size: 1.2rem; font-weight: 750; letter-spacing: -0.04em; text-decoration: none; }
-.brand span { color: var(--rose); }
+.brand { display: inline-flex; align-items: center; gap: .35rem; color: var(--ink); font-size: 1.2rem; font-weight: 750; letter-spacing: -0.04em; text-decoration: none; }
+.brand img { width: 1.65rem; height: 1.65rem; object-fit: contain; }
 .nav-links, footer div { display: flex; gap: 1.25rem; }
 a { color: var(--rose); text-underline-offset: 0.18em; }
 .nav-links a { color: var(--ink); font-size: .92rem; text-decoration: none; }
